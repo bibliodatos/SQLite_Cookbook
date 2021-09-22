@@ -1,4 +1,4 @@
--- Finding rows that satisfy multiple conditions
+-- Finding rows that satisfy multiple conditions  
 
 SELECT *
   FROM emp
