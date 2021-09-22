@@ -1,6 +1,6 @@
--- Example 3.2 Finding rows in common between two tables
+-- Example 3.3 Finding rows in common between two tables
 
--- Create view 
+-- Create view
 Create view V
 AS
 SELECT ename, job, sal
