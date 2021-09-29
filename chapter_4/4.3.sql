@@ -1,4 +1,4 @@
--- Example 4.2 Overriding default values using NULL
+-- Example 4.3 Overriding default values using NULL
 
 SAVEPOINT "RESTOREPOINT";
 
