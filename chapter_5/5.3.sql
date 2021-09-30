@@ -1,4 +1,4 @@
--- Example 5.2 Listing indexed columns for a table
+-- Example 5.3 Listing indexed columns for a table
 
 CREATE INDEX empno_idx ON emp(empno);
 
