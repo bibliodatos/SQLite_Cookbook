@@ -1,4 +1,4 @@
--- Example 6.6 Determing whether a string is alphanumeric
+-- Example 6.6 Determining whether a string is alphanumeric
 
 
 CREATE view V AS
