@@ -3,7 +3,7 @@
 SELECT SUM(sal)
   FROM emp;
 
-SELECT SUM(sal)
+SELECT deptno, SUM(sal)
   FROM emp
 GROUP BY deptno;
 
