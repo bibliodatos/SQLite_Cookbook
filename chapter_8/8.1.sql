@@ -1,4 +1,4 @@
--- Example 8.1 Adding and subtracting days, months and years
+-- Example 8.1 Adding and subtracting days, months and years to a date
 
 /*
   SQLite useds the DATE() function and built in intervals.
