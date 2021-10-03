@@ -3,8 +3,7 @@
 
 /*
 	In SQLite find all the Mondays in the current month
-	We utilize our dummy V500 view to iterate and generate a months worth of dates.
-
+	We utilize our dummy V500 view to iterate and generate a month's worth of dates.
 */
 SELECT MIN(day) AS first_monday, MAX(day) AS last_monday
 FROM
