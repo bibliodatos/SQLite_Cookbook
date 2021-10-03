@@ -1,9 +1,7 @@
--- Example 9.6 Determining the date of the first and last occurrences of a
--- specific weekday in the month
+-- Example 9.7 Displaying a calendar for current month
 
 /*
-	In SQLite find all the Mondays in the current month
-	We utilize our dummy V500 view to iterate and generate a month's worth of dates.
+	SQLite solution
 */
 
 SELECT
@@ -16,7 +14,8 @@ SELECT
   MAX (CASE day_of_week WHEN '0' THEN STRFTIME('%d', day) END ) AS Su
 FROM
 (
- SELECT day,
+  -- Get a month's worth of dates for the current month
+  SELECT day,
    STRFTIME('%W', day) - STRFTIME('%W', DATE('NOW', 'start of month')) + 1 AS week,
    STRFTIME('%w', day) AS day_of_week
  FROM
@@ -24,11 +23,11 @@ FROM
    FROM sqlite100
    LIMIT 31
    )
-   ) AS x
+) AS x
 GROUP BY week
 ORDER BY week
 
 /*
-  The example in SQL Cookbook for MySQL relies on ADDDATE() function and is
-	much longer than our SQLite solution.
+  The example in SQL Cookbook for MySQL uses a recursive CTE to get the dates
+	for a month. It then uses MAX and CASE to pivot the data as we did above.
 */
