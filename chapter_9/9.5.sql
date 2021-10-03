@@ -11,6 +11,7 @@ WHERE STRFTIME('%Y', day) = STRFTIME('%Y', 'NOW')
 	AND STRFTIME('%w', day) = '5'
 LIMIT 366
 
+
 /*
   The example in SQL Cookbook for MySQL uses a recursive CTE. I like our simpler
 	solution shown above.
