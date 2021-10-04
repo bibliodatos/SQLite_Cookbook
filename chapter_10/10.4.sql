@@ -1,8 +1,8 @@
 -- Example 10.4 Filling in missing dates. Employees hired by month
 
 /*
-	SQLite solution:
-	Find the number of employees hired per year starting with the year of the
+  SQLite solution:
+  Find the number of employees hired per year starting with the year of the
   first hire and then going for 9 more years.  Display a count even if no one
   was hired in a year.
 */
