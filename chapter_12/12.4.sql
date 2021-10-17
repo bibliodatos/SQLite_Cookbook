@@ -1,9 +1,12 @@
 -- Example 12.4 Reverse pivoting a result set into one column
 
 /*
-  Return all the columns from a query in just one column. Return employee name,
-  job and salary of all employees in department 10.
+  Return all the columns from a query in just one column. Report employee name,
+  job and salary of all employees in department 10. We need two CTEs.  The first
+  CTE uses recursion to create four rows of output for us. x_tab CTE does a
+  cartesian join to gather all our data we need.
 */
+
 WITH four_rows (id)
 AS
 (
@@ -31,6 +34,7 @@ SELECT
 FROM x_tab
 
 /*
-  No difference between SQLite and MySQL. We could CAST to TEXT instead of
-  CHAR(4) but SQLite accepts CHAR(4).
+  No substantial difference between SQLite and MySQL. We could CAST to TEXT
+  instead of CHAR(4) but SQLite accepts CHAR(4). Also MySQL requires the
+  RECURSIVE keyword with the four_rows CTE.
 */
