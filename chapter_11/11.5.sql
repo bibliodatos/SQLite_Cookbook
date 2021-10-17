@@ -2,7 +2,7 @@
 
 
 /*
-  We want to find the employee with the top 5 salaries and we want to include
+  We want to find the employees with the top 5 salaries and we want to include
   all ties in the result. Use DENSE_RANK window function.
 */
 SELECT ename, sal
