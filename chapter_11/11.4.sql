@@ -1,0 +1,41 @@
+-- Example 11.4 Determining rows that are reciprocals
+
+/*
+  Create our view with test data
+*/
+CREATE VIEW V11_4 (TEST1, TEST2) AS
+  SELECT 20, 20
+  UNION ALL
+  SELECT 50, 25
+  UNION ALL
+  SELECT 20, 20
+  UNION ALL
+  SELECT 60, 30
+  UNION ALL
+  SELECT 70, 90
+  UNION ALL
+  SELECT 80, 130
+  UNION ALL
+  SELECT 90, 70
+  UNION ALL
+  SELECT 100, 50
+  UNION ALL
+  SELECT 110, 55
+  UNION ALL
+  SELECT 120, 60
+  UNION ALL
+  SELECT 130, 80
+  UNION ALL
+  SELECT 140, 70
+;
+
+/*
+  Self join and then use DISTINCT
+*/
+SELECT DISTINCT v1.*
+FROM V11_4 AS v1, V11_4 as v2
+WHERE v1.TEST1 = v2.TEST2
+AND v1.TEST2 = v2.TEST1
+AND v1.TEST1 <= v1.test2
+
+-- No difference between SQLite and MySQL
