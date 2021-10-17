@@ -1,7 +1,5 @@
 -- Example 11.12 Generating simple forecasts
 
-
-
 /*
   Based on current data return additional rows and columns representing
   future actions.  We can use a recursive CTE to generate the extra rows,
@@ -37,5 +35,6 @@ ORDER BY 1
 /*
   Our SQLite solution is essentially the same as those given for DB2, MySQL, and
   SQL Server in the book but we need to use DATE() function along with 'NOW' to
-  genrate the current date while MySQL uses the CURDATE() function.
+  generate the current date while MySQL uses the CURDATE() function. MySQL also
+  needs the RECURSIVE keyword with the CTE.
 */
