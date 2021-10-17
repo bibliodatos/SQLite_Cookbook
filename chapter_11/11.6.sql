@@ -1,4 +1,4 @@
--- Example 11.5 SELECTing the top N records
+-- Example 11.6 Finding the records with the highest and lowest values
 
 
 /*
