@@ -34,7 +34,7 @@ SELECT '2013-01-12', 1100
 ;
 
 /*
-	Compute the moving sum of salaries for 90 days bases on employee hire date.
+	Compute the moving sum of salaries for 90 days based on employee hire date.
 	This solution uses a scalar subquery to calculate the spending pattern salary
 	totals. This would work fine on MySQL excuding the difference in date
 	manipulation that MySQL has with SQLite.
@@ -48,22 +48,12 @@ FROM V12_19 AS e
 	MySQL can accomplish this report without the scalar subquery by using the
 	SUM() OVER() window function with a RANGE INTERVAL set of 90 days PRECEDING.
 	SQLite's SUM() OVER() window function can only operate on INTEGER data so
-	it can't be applied directly to TEXT/DATE fields.  I will show a solution
-	below where we workaround this limitation by converting the TEXT/DATE field
-	into an INTEGER representing the EPOCH seconds since 1970-01-01.
+	it can't be applied directly to TEXT/DATE fields.  The solution
+	below works around this limitation by converting the TEXT/DATE field
+	into an INTEGER representing the JULIAN day as an INTEGER.
 */
 
-/*
-	Create another version of our data with dates converted to epoch seconds
-*/
-CREATE VIEW V12_19_EPOCH (hiredate, epoch_hiredate, sal) AS
-   SELECT hiredate,  CAST(STRFTIME('%s', hiredate) AS INTEGER), sal
-FROM V12_19;
-
-/*
-	Now we can use a window function in SQLite to calculate our 90 day
-	totals. Number of seconds in 90 days == (24 * 60 * 60 * 90).
-*/
 SELECT hiredate, sal,
-	SUM(sal) OVER (ORDER BY epoch_hiredate RANGE BETWEEN (24 * 60 * 60 * 90) PRECEDING AND CURRENT ROW) AS spending_pattern
-FROM V12_19_EPOCH
+	SUM(sal) OVER (ORDER BY CAST(STRFTIME('%J', hiredate) AS INTEGER)
+		RANGE BETWEEN 90 PRECEDING AND CURRENT ROW) AS spending_pattern
+FROM V12_19;
