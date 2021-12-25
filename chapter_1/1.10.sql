@@ -1,4 +1,4 @@
--- Limiting the number of rows in a SELECT
+-- Returning n random records from a table
 
 SELECT ename, job
   FROM emp
