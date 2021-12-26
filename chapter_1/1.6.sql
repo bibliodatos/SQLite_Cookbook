@@ -1,4 +1,6 @@
--- Referencing an aliased column in WHERE clause
+/*
+  Query 1.6.sql - Referencing an aliased column in WHERE clause
+*/
 
 SELECT *
   FROM (

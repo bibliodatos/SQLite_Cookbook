@@ -1,4 +1,6 @@
--- Retrieving a subset of rows from a table
+/*
+  Query 1.2 - Retrieving a subset of rows from a table
+*/
 
 SELECT *
   FROM emp

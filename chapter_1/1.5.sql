@@ -1,6 +1,8 @@
--- Meaningful name for columns
+/*
+  Query 1.5 - Meaningful name for columns
+*/
 
 SELECT sal AS salary, comm AS commission
   FROM emp;
 
--- no differences from MySQL
+-- No differences from MySQL

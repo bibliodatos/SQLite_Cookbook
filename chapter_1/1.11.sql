@@ -1,4 +1,6 @@
--- Finding NULL values
+/*
+  Query 1.11 - Finding NULL values
+*/
 
 SELECT *
   FROM emp

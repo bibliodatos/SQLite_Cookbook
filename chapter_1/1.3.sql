@@ -1,4 +1,6 @@
--- Finding rows that satisfy multiple conditions  
+/*
+  Query 1.3 - Finding rows that satisfy multiple conditions
+*/
 
 SELECT *
   FROM emp

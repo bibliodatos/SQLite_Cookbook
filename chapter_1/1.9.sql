@@ -1,4 +1,6 @@
--- Limiting the number of rows in a SELECT
+/*
+  Query 1.9 -  Limiting the number of rows in a SELECT
+*/
 
 SELECT *
   FROM emp LIMIT 5;

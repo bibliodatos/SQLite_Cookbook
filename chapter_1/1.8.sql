@@ -1,4 +1,6 @@
--- Conditional logic in a SELECT
+/*
+  Query 1.8 - Conditional logic in a SELECT
+*/
 
 SELECT ename, sal,
     CASE WHEN sal <= 2000 THEN 'UNDERPAID'

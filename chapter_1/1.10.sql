@@ -1,4 +1,6 @@
--- Returning n random records from a table
+/*
+  Query 1.10 - Returning n random records from a table
+*/
 
 SELECT ename, job
   FROM emp

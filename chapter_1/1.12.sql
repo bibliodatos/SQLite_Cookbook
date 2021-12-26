@@ -1,8 +1,9 @@
--- Transforming NULLs into real values
+/*
+  Query 1.12 - Transforming NULLs into real values
+*/
 
 SELECT COALESCE(comm,0)
   FROM emp;
-
 
 -- or use CASE statement
 SELECT CASE
@@ -10,6 +11,5 @@ SELECT CASE
        ELSE 0
        END AS Commission
 FROM emp;
-
 
 -- no differences from MySQL
