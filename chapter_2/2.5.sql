@@ -1,4 +1,6 @@
--- Example 2.5 Dealing wiht NULLs when sorting
+/*
+  Query 2.5 - Dealing with NULLs when sorting
+*/
 
 -- SQLite NULLS sort first by default
 SELECT ename, sal, comm

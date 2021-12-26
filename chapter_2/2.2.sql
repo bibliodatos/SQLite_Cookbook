@@ -1,4 +1,6 @@
--- Query results sorted by multiple fields
+/*
+  Query 2.2 -  Results sorted by multiple fields
+*/
 
 -- Order by department number first and then salary within the department
 SELECT ename, deptno, sal, ename, job

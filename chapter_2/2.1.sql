@@ -1,4 +1,6 @@
--- Query results in a specified order
+/*
+  Query 2.1 -  Results in a specified order
+*/
 
 -- Order by smallest salary to largest salary
 SELECT ename, job, sal

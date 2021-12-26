@@ -1,4 +1,6 @@
--- Example 2.3 Sorting query by substrings
+/*
+  Query 2.3 - Sorting query by substrings
+*/
 
 -- Sort by last 2 characters in job field
 SELECT ename, job
@@ -6,7 +8,7 @@ SELECT ename, job
   ORDER BY substr(job, length(job) - 1, 2);
 
 /*
-Differences from SQLite to MySQL:
-  SQLite uses length function
-  MySQL uses len function
+  Differences from SQLite to MySQL:
+    SQLite uses length function
+    MySQL uses len function
 */
