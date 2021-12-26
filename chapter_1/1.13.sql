@@ -1,5 +1,5 @@
 /*
-  Query 1.12 - Searching for patterns
+  Query 1.13 - Searching for patterns
 */
 
 SELECT ename, job
