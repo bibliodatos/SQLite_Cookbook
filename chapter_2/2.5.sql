@@ -2,17 +2,17 @@
   Query 2.5 - Dealing with NULLs when sorting
 */
 
--- SQLite NULLS sort first by default
+-- 2.4.a SQLite NULLS sort first by default
 SELECT ename, sal, comm
   FROM emp
   ORDER BY 3
 
--- Make NULLS sort last using DESC
+-- 2.4.b Make NULLS sort last using DESC
 SELECT ename, sal, comm
   FROM emp
   ORDER BY 3 DESC
 
--- NON-NULL commission sorted ascending and all NULLS last
+-- 2.4.c NON-NULL commission sorted ascending and all NULLS last
 SELECT ename, sal, comm
   FROM  (
     SELECT ename, sal, comm,
@@ -21,7 +21,7 @@ SELECT ename, sal, comm
   ) x
 ORDER BY is_null DESC, comm ASC
 
--- NON-NULL commission sorted descending and all NULLS last
+-- 2.4.d NON-NULL commission sorted descending and all NULLS last
 SELECT ename, sal, comm
   FROM  (
     SELECT ename, sal, comm,
@@ -30,7 +30,7 @@ SELECT ename, sal, comm
   ) x
 ORDER BY is_null DESC, comm DESC
 
--- NON-NULL commission sorted ascending and all NULLS first
+-- 2.4.e NON-NULL commission sorted ascending and all NULLS first
 SELECT ename, sal, comm
   FROM  (
     SELECT ename, sal, comm,
@@ -39,7 +39,7 @@ SELECT ename, sal, comm
   ) x
 ORDER BY is_null ASC, comm ASC
 
--- NON-NULL commission sorted descending and all NULLS first
+-- 2.4.f NON-NULL commission sorted descending and all NULLS first
 SELECT ename, sal, comm
   FROM  (
     SELECT ename, sal, comm,
