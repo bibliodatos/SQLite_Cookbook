@@ -1,4 +1,3 @@
-
 /*
   Query 3.12 - Using NULLS in operatons and comparisons
 */
