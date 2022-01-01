@@ -1,4 +1,6 @@
--- Example 3.3 Finding rows in common between two tables
+/*
+  Query 3.3 - Finding rows in common between two tables
+*/
 
 -- Create view
 Create view V

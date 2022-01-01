@@ -1,4 +1,6 @@
--- Example 3.2 Combining related rows
+/*
+  Query 3.2 - Combining related rows
+*/
 
 -- Join emp table to dept table on deptno field. Implicit join.
 SELECT e.ename, d.loc
