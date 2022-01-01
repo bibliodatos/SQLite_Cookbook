@@ -1,4 +1,6 @@
--- Example 3.6 Adding joins to query without interfering with other joins
+/*
+  Query 3.6 - Adding joins to query without interfering with other joins
+*/
 
 -- LEFT OUTER join the emp_bonus table so we don't limit the other rows
 SELECT e.ename, d.loc, eb.received

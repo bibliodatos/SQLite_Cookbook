@@ -1,6 +1,7 @@
--- Example 3.5 Selecting rows from one table that don't correspond to rows in another
+/*
+  Query 3.5 - Selecting rows from one table that don't correspond to rows in another
+*/
 
---
 SELECT d.*
   FROM dept AS d
   LEFT OUTER JOIN emp AS e

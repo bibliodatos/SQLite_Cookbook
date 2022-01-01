@@ -1,4 +1,6 @@
--- Example 3.9 Joins when using aggregates
+/*
+  Query 3.9 - Join when using aggregates
+*/
 
 SAVEPOINT "RESTOREPOINT";
 

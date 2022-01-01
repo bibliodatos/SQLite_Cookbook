@@ -1,4 +1,6 @@
--- Example 3.10 Outer Joins when using aggregates
+/*
+  Query 3.10 - Outer Joins when using aggregates
+*/
 
 SAVEPOINT "RESTOREPOINT";
 
@@ -6,8 +8,6 @@ DELETE FROM emp_bonus;
 
 INSERT INTO emp_bonus VALUES(7934, '17-MAR-2005', 1);
 INSERT INTO emp_bonus VALUES(7934, '15-MAR-2005', 2);
-
-
 
 /*
   Total Salaries and Total Bonuses for department 10
@@ -31,7 +31,6 @@ FROM
 
   )
 GROUP BY deptno
-
 
 ROLLBACK TO SAVEPOINT "RESTOREPOINT";
 

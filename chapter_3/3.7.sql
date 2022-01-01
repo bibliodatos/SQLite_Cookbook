@@ -1,12 +1,16 @@
--- Example 3.7 Do two tables have the same data?
+/*
+  Query 3.7 - Do two tables have the same data?
+*/
 
-
+-- Make a view
 CREATE view V37
 AS
 SELECT * FROM emp WHERE deptno != 10
 UNION ALL
 SELECT * FROM emp WHERE ename = 'WARD';
 
+
+-- Main query
 SELECT *
   FROM (
     SELECT e.empno, e.ename, e.job, e.mgr, e.hiredate,
