@@ -1,4 +1,6 @@
--- Query 3.1 - Stacking one rowset atop of another
+/*
+  Query 3.1 - Stacking one rowset atop of another
+*/
 
 SELECT ename as ename_and_dname, deptno
   FROM emp
